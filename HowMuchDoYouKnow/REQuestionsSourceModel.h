@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface REQuestionsSourceModel : NSObject
 
@@ -28,5 +29,8 @@
 - (void)getQuestionAndAnswers;
 - (NSString*)isAnswerCorrect:(NSString*)guessedAnswer;
 - (BOOL)isGameOver;
+
+- (UIColor*)getButtonDownColor;
+- (UIColor*)getButtonUpColor;
 
 @end

@@ -35,6 +35,8 @@
     [self setDefaultValues];
     [self.questionList getQuestionAndAnswers];
     [self setTextToLabelAndButtons];
+    [self resetButtonColors];
+    [self enableButtons];
 }
 
 - (void)getNextQuestion {
@@ -82,6 +84,7 @@
 - (IBAction)buttonNextQuestionPressed:(id)sender {
     [self enableButtons];
     [self getNextQuestion];
+    [self resetButtonColors];
 }
 
 - (void)enableButtons {
@@ -99,6 +102,51 @@
     self.buttonAnswer4.enabled = NO;
     self.buttonNextQuestion.enabled = YES;
 }
+
+//Button colorchanges
+- (void)resetButtonColors {
+    self.buttonAnswer1.backgroundColor = [self.questionList getButtonUpColor];
+    self.buttonAnswer2.backgroundColor = [self.questionList getButtonUpColor];
+    self.buttonAnswer3.backgroundColor = [self.questionList getButtonUpColor];
+    self.buttonAnswer4.backgroundColor = [self.questionList getButtonUpColor];
+    self.buttonNextQuestion.backgroundColor = [self.questionList getButtonUpColor];
+}
+
+- (IBAction)buttonAnswer1Down:(id)sender {
+    self.buttonAnswer1.backgroundColor = [self.questionList getButtonDownColor];
+}
+- (IBAction)buttonAnswer2Down:(id)sender {
+    self.buttonAnswer2.backgroundColor = [self.questionList getButtonDownColor];
+}
+- (IBAction)buttonAnswer3Down:(id)sender {
+    self.buttonAnswer3.backgroundColor = [self.questionList getButtonDownColor];
+}
+- (IBAction)buttonAnswer4Down:(id)sender {
+    self.buttonAnswer4.backgroundColor = [self.questionList getButtonDownColor];
+}
+- (IBAction)buttonGoToResultDown:(id)sender {
+    self.buttonGoToResults.backgroundColor = [self.questionList getButtonDownColor];
+}
+
+- (IBAction)buttonAnswer1DragOutside:(id)sender {
+    self.buttonAnswer1.backgroundColor = [self.questionList getButtonUpColor];
+}
+- (IBAction)buttonAnswer2DragOutside:(id)sender {
+    self.buttonAnswer2.backgroundColor = [self.questionList getButtonUpColor];
+}
+- (IBAction)buttonAnswer3DragOutside:(id)sender {
+    self.buttonAnswer3.backgroundColor = [self.questionList getButtonUpColor];
+}
+- (IBAction)buttonAnswer4DragOutside:(id)sender {
+    self.buttonAnswer4.backgroundColor = [self.questionList getButtonUpColor];
+}
+- (IBAction)buttonNextQuestionDown:(id)sender {
+    self.buttonNextQuestion.backgroundColor = [self.questionList getButtonDownColor];
+}
+- (IBAction)buttonGoToResultDragOutside:(id)sender {
+    self.buttonGoToResults.backgroundColor = [self.questionList getButtonUpColor];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

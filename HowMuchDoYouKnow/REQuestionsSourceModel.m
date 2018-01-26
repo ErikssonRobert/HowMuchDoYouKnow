@@ -7,6 +7,7 @@
 //
 
 #import "REQuestionsSourceModel.h"
+#import <UIKit/UIKit.h>
 
 
 @implementation REQuestionsSourceModel
@@ -146,6 +147,16 @@
     else {
         return NO;
     }
+}
+
+//Button colors
+
+- (UIColor*)getButtonDownColor {
+    return [UIColor colorWithRed:0.568f green:0.156f blue:0.274f alpha:0.4f];
+}
+
+- (UIColor*)getButtonUpColor {
+    return [UIColor colorWithRed:0.568f green:0.156f blue:0.274f alpha:1.0f];
 }
 
 @end

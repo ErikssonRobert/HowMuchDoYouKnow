@@ -32,14 +32,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8F0-VI-nmN">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8F0-VI-nmN">
                                 <rect key="frame" x="62" y="343" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.56862745098039214" green="0.11809188185149055" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonAnswer1Down:" destination="BYZ-38-t0r" eventType="touchDown" id="ypw-jN-HO4"/>
+                                    <action selector="buttonAnswer1DragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="oT4-cd-sUZ"/>
                                     <action selector="buttonAnswer1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4l-vG-znY"/>
                                 </connections>
                             </button>
@@ -50,7 +57,14 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonAnswer2Down:" destination="BYZ-38-t0r" eventType="touchDown" id="OqW-Uo-rnW"/>
+                                    <action selector="buttonAnswer2DragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="eCr-Aa-RJE"/>
                                     <action selector="buttonAnswer2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eha-SR-bJ5"/>
                                 </connections>
                             </button>
@@ -61,8 +75,15 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonAnswer4Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKe-LO-fdG"/>
+                                    <action selector="buttonAnswer3Down:" destination="BYZ-38-t0r" eventType="touchDown" id="4X6-cP-HiP"/>
+                                    <action selector="buttonAnswer3DragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="P7j-PH-hni"/>
+                                    <action selector="buttonAnswer3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjV-zr-OOn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt0-Kv-ynM">
@@ -72,8 +93,15 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonAnswer3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yku-Gg-Ls7"/>
+                                    <action selector="buttonAnswer4Down:" destination="BYZ-38-t0r" eventType="touchDown" id="6pi-qH-6V9"/>
+                                    <action selector="buttonAnswer4DragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="3ay-BJ-qM4"/>
+                                    <action selector="buttonAnswer4Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9u-yl-0z3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU0-7f-iYC">
@@ -83,7 +111,13 @@
                                 <state key="normal" title="Nästa fråga">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonNextQuestionDown:" destination="BYZ-38-t0r" eventType="touchDown" id="R4g-v8-3pw"/>
                                     <action selector="buttonNextQuestionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eh5-Py-5QE"/>
                                 </connections>
                             </button>
@@ -94,7 +128,14 @@
                                 <state key="normal" title="Se Resultat">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonGoToResultDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Whb-f3-wJm"/>
+                                    <action selector="buttonGoToResultDragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="xJn-oN-vgR"/>
                                     <segue destination="8Tm-gV-r9P" kind="show" id="ydv-B1-g8m"/>
                                 </connections>
                             </button>
@@ -113,8 +154,8 @@
                     <connections>
                         <outlet property="buttonAnswer1" destination="8F0-VI-nmN" id="fc5-f1-wLT"/>
                         <outlet property="buttonAnswer2" destination="nWg-J5-2UH" id="WJn-s3-KF3"/>
-                        <outlet property="buttonAnswer3" destination="bt0-Kv-ynM" id="As0-nE-ZO4"/>
-                        <outlet property="buttonAnswer4" destination="1hs-VO-8DO" id="d7m-1a-HcS"/>
+                        <outlet property="buttonAnswer3" destination="1hs-VO-8DO" id="N8z-Hc-pMk"/>
+                        <outlet property="buttonAnswer4" destination="bt0-Kv-ynM" id="aeG-Pt-dpc"/>
                         <outlet property="buttonGoToResults" destination="2US-HW-tzJ" id="5YM-sM-F7O"/>
                         <outlet property="buttonNextQuestion" destination="LU0-7f-iYC" id="jT4-In-QKA"/>
                         <outlet property="labelQuestion" destination="AEK-dT-Goa" id="S3X-vu-ijX"/>

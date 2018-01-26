@@ -27,8 +27,8 @@
     double t = [[NSDate date] timeIntervalSince1970];
     
     int padding = 10;
-    float waveHeight = 2.5;
-    int waveSpeed = 20;
+    float waveHeight = 1.5;
+    int waveSpeed = 10;
     
     //Top Line
     float x1 = rect.origin.x + padding;
@@ -63,7 +63,7 @@
     float x4 = rect.origin.x +padding;
     float y4 = y3;
     
-    for (float y = y4; y > rect.origin.y + padding; y -= 1.0f) {
+    for (float y = y4; y > rect.origin.y + padding + 2; y -= 1.0f) {
         float formula = sin(y * 0.1 + (t * waveSpeed)) + sin(y * 0.04);
         CGPathAddLineToPoint(linePath, NULL, x4 + (formula * waveHeight), y);
     }
