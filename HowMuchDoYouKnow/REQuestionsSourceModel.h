@@ -27,6 +27,6 @@
 - (void)setQuestionsForThisRound;
 - (void)getQuestionAndAnswers;
 - (NSString*)isAnswerCorrect:(NSString*)guessedAnswer;
-
+- (BOOL)isGameOver;
 
 @end

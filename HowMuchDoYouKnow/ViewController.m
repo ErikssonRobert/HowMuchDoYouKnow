@@ -73,7 +73,7 @@
 
 - (void)isAnswerCorrect:(NSString*)guessedAnswer {
     self.labelRightOrWrong.text = [self.questionList isAnswerCorrect:guessedAnswer];
-    if (self.questionList.questionNumber == 5) {
+    if ([self.questionList isGameOver]) {
         self.buttonGoToResults.hidden = NO;
         [self.stats saveRightsAnd:self.questionList.points Wrongs:self.questionList.wrongs];
     }

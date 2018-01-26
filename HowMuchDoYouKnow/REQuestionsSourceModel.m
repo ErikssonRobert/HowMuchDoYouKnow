@@ -11,6 +11,7 @@
 
 @implementation REQuestionsSourceModel
 
+//Questions array
 - (NSArray*)setQuestion {
     NSArray *questions;
     questions = @[
@@ -87,7 +88,7 @@
     return questions;
 }
 
-//Flytta all spellogik hit!
+//Game Logic
 
 - (void)setDefaultValues {
     self.pastQuestions = [NSMutableArray arrayWithObjects:@30, @30, @30, @30, @30, nil];
@@ -135,6 +136,15 @@
     else {
         self.wrongs++;
         return @"Tyvärr, fel svar.";
+    }
+}
+
+- (BOOL)isGameOver {
+    if (self.questionNumber == 5) {
+        return YES;
+    }
+    else {
+        return NO;
     }
 }
 
